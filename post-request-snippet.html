@@ -1,0 +1,13 @@
+<script>
+  const xhr = new XMLHttpRequest();
+  xhr.open("POST", <SERVER_URL>, true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+
+  const date = new Date();
+  xhr.send(
+    JSON.stringify({
+      pageload_date: date,
+      pathname: window.location.pathname,
+    })
+  );
+</script>
